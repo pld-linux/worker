@@ -18,22 +18,21 @@ URL:		http://www.boomerangsworld.de/worker/
 BuildRequires:	XFree86-devel
 BuildRequires:	bzip2-devel
 BuildRequires:	zlib-devel
-BuildRoot:	%{_tmppath}/%{name}-buildroot
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Worker is a graphical filemanager for the X Window System.
-It uses the classical two-panel-view of the files and directories. 
-It has many intern operations while any extern program can also be
-used for operate on the selected items. You can easily add actions 
-to filetypes or buttons with the builtin configuration program.
+Worker is a graphical filemanager for the X Window System. It uses the
+classical two-panel-view of the files and directories. It has many
+intern operations while any extern program can also be used for
+operate on the selected items. You can easily add actions to filetypes
+or buttons with the builtin configuration program.
 
 %description -l pl
-Woker jest graficznym managerem plików dla X Window System.
-U¿ywa klasycznego widoku dwóch paneli z list± plików i katalogów.
-Wiele operacji potrafi wykonaæ samodzielnie ale mo¿e te¿ wykorzystaæ
-zewnêtrzne programy do dzia³ania na zaznaczonch elementach.
-Nowe opcje mo¿na ³atwo dodawaæ przy u¿yciu wbudowanego programu
-konfiguracyjnego.
+Woker jest graficznym managerem plików dla X Window System. U¿ywa
+klasycznego widoku dwóch paneli z list± plików i katalogów. Wiele
+operacji potrafi wykonaæ samodzielnie ale mo¿e te¿ wykorzystaæ
+zewnêtrzne programy do dzia³ania na zaznaczonch elementach. Nowe opcje
+mo¿na ³atwo dodawaæ przy u¿yciu wbudowanego programu konfiguracyjnego.
 
 %prep
 rm -rf $RPM_BUILD_ROOT
@@ -65,69 +64,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/worker/config-*
 %{_mandir}/man1/worker.1*
 %{_pixmapsdir}/*
-
-%changelog
-* Tue Jun 10 2003 Götz Waschk <waschk@linux-mandrake.com> 2.8.0-1mdk
-- new version
-
-* Mon Apr 28 2003 Götz Waschk <waschk@linux-mandrake.com> 2.7.1-1mdk
-- fix directory ownership, thanks to distriblint
-- new version
-
-* Wed Mar 12 2003 Götz Waschk <waschk@linux-mandrake.com> 2.7.0-3mdk
-- fix buildrequires
-
-* Fri Jan 24 2003 Lenny Cartier <lenny@mandrakesoft.com> 2.7.0-2mdk
-- rebuild
-
-* Sun Oct 27 2002 Götz Waschk <waschk@linux-mandrake.com> 2.7.0-1mdk
-- new version
-
-* Mon Aug 26 2002 Götz Waschk <waschk@linux-mandrake.com> 2.6.1-1mdk
-- new version 
-- fixed menu longtitle
-- drop merged patch
-
-* Mon Aug 19 2002 Götz Waschk <waschk@linux-mandrake.com> 2.6.0-1mdk
-- new version
-- patch for gcc3.2 build
-
-* Thu Aug 15 2002 Laurent Culioli <laurent@pschit.net> 2.5.0-3mdk
-- Rebuild with gcc3.2
-
-* Tue Jul 30 2002 Götz Waschk <waschk@linux-mandrake.com> 2.5.0-2mdk
-- updated html documentation
-- don't bzip2 the png icons
-- autoconf 2.5 macro
-
-* Mon May 27 2002  Lenny Cartier <lenny@mandrakesoft.com> 2.5.0-1mdk
-- 2.5.0
-
-* Sun Apr  7 2002 Götz Waschk <waschk@linux-mandrake.com> 2.4.0-1mdk
-- new version
-- png icons
-
-* Thu Jan 10 2002 Lenny Cartier <lenny@mandrakesoft.com> 2.3.1-1mdk
-- 2.3.1
-
-* Tue Dec 18 2001 Götz Waschk <waschk@linux-mandrake.com> 2.3.0-2mdk
-- rebuild to fix broken package on mirror
-
-* Wed Nov  7 2001 Götz Waschk <waschk@linux-mandrake.com> 2.3.0-1mdk
-- added icons
-- 2.3.0
-
-* Mon Jul 16 2001 Lenny Cartier <lenny@mandrakesoft.com> 2.2.2-1mdk
-- updated by Götz Waschk <waschk@linux-mandrake.com> :
-	- 2.2.2
-
-* Wed May 16 2001 Lenny Cartier <lenny@mandrakesoft.com> 2.2.1-1mdk
-- updated by Götz Waschk <waschk@linux-mandrake.com> :
-	- 2.2.1
-
-* Thu Mar 22 2001 Lenny Cartier <lenny@mandrakesoft.com> 2.2.0-1mdk
-- updated to 2.2.0
-
-* Wed Mar 07 2001 Lenny Cartier <lenny@mandrakesoft.com> 2.1.0-1mdk
-- added in contribs by Götz Waschk <waschk@linux-mandrake.com> :
-	- initial Mandrake package
