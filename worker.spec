@@ -15,6 +15,7 @@ Source1:	http://www.boomerangsworld.de/worker/downloads/%{name}-%{doc_version}_%
 Source2:	%{name}-48.png
 Source3:	%{name}-32.png
 Source4:	%{name}-16.png
+Source5:	%{name}.desktop
 URL:		http://www.boomerangsworld.de/worker/
 BuildRequires:	XFree86-devel
 BuildRequires:	bzip2-devel
@@ -45,7 +46,7 @@ mo¿na ³atwo dodawaæ przy u¿yciu wbudowanego programu konfiguracyjnego.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_pixmapsdir}
+install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_desktopdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
@@ -53,6 +54,7 @@ install -d $RPM_BUILD_ROOT%{_pixmapsdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 install %{SOURCE3} $RPM_BUILD_ROOT%{_pixmapsdir}
 install %{SOURCE4} $RPM_BUILD_ROOT%{_pixmapsdir}
+install %{SOURCE5} $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -63,6 +65,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %dir %{_datadir}/worker
 %attr(755,root,root) %{_datadir}/worker/scripts
+%{_desktopdir}/*.desktop
 %{_datadir}/worker/catalogs
 %{_datadir}/worker/config-*
 %{_mandir}/man1/worker.1*
