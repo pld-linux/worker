@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Worker
+Comment=File Manager
+Comment[pl]=Zarządca plików
+Icon=WorkerIcon.xpm
+Exec=worker
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=Utility;FileManager;
+# vi: encoding=utf-8
