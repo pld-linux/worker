@@ -31,7 +31,7 @@ or buttons with the builtin configuration program.
 Woker jest graficznym zarz±dc± plików dla X Window System. U¿ywa
 klasycznego widoku dwóch paneli z list± plików i katalogów. Wiele
 operacji potrafi wykonaæ samodzielnie, ale mo¿e te¿ wykorzystaæ
-zewnêtrzne programy do dzia³ania na zaznaczonch elementach. Nowe opcje
+zewnêtrzne programy do dzia³ania na zaznaczonych elementach. Nowe opcje
 mo¿na ³atwo dodawaæ przy u¿yciu wbudowanego programu konfiguracyjnego.
 
 %prep
