@@ -1,5 +1,6 @@
-%define		doc_version	2.0.0
-%define		doc_release	3
+%define		doc_version	2.9.0
+%define		doc_release	1
+%define		doc_dir		%{name}-%{doc_version}_%{doc_release}-doc
 Summary:	A file manager for X in AMIGA style
 Summary(pl):	Zarz±dca plików dla X w amigowskim stylu
 Name:		worker
@@ -10,7 +11,7 @@ Group:		Applications/File
 Source0:	http://www.boomerangsworld.de/worker/downloads/%{name}-%{version}.tar.bz2
 # Source0-md5:	cc34a21b0445eb42fe6fb7df3e78b59b
 Source1:	http://www.boomerangsworld.de/worker/downloads/%{name}-%{doc_version}_%{doc_release}-doc.tar.bz2
-# Source1-md5:	782093a33feafb70fef35da1d6457a3f
+# Source1-md5:	5b6c8b8d85dc06563ea856c22361dd57
 Source2:	%{name}-48.png
 Source3:	%{name}-32.png
 Source4:	%{name}-16.png
@@ -58,7 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README NEWS AUTHORS ChangeLog worker-2.0.0/docs/*
+%doc README NEWS AUTHORS ChangeLog %{doc_dir}/English %{doc_dir}/Deutsch %{doc_dir}/pics %{doc_dir}/index.html
 %attr(755,root,root) %{_bindir}/*
 %dir %{_datadir}/worker
 %attr(755,root,root) %{_datadir}/worker/scripts
