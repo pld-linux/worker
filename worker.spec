@@ -3,12 +3,12 @@
 Summary:	A file manager for X in AMIGA style
 Summary(pl):	Zarz±dca plików dla X w amigowskim stylu
 Name:		worker
-Version:	2.8.5
+Version:	2.9.0
 Release:	1
 License:	GPL
 Group:		Applications/File
 Source0:	http://www.boomerangsworld.de/worker/downloads/%{name}-%{version}.tar.bz2
-# Source0-md5:	39b3c4c9f3ff4c49d326505f2ca256a5
+# Source0-md5:	cc34a21b0445eb42fe6fb7df3e78b59b
 Source1:	http://www.boomerangsworld.de/worker/downloads/%{name}-%{doc_version}_%{doc_release}-doc.tar.bz2
 # Source1-md5:	782093a33feafb70fef35da1d6457a3f
 Source2:	%{name}-48.png
