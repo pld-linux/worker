@@ -17,6 +17,7 @@ Source4:	%{name}-16.png
 URL:		http://www.boomerangsworld.de/worker/
 BuildRequires:	XFree86-devel
 BuildRequires:	bzip2-devel
+BuildRequires:	libstdc++-devel
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
