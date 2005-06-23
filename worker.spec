@@ -1,17 +1,17 @@
-%define		doc_version	2.9.0
+%define		doc_version	2.10.0
 %define		doc_release	1
-%define		doc_dir		%{name}-%{doc_version}_%{doc_release}-doc
+%define		doc_dir		%{name}-%{doc_version}.%{doc_release}-doc
 Summary:	A file manager for X in AMIGA style
 Summary(pl):	Zarz±dca plików dla X w amigowskim stylu
 Name:		worker
-Version:	2.9.0
+Version:	2.10.0
 Release:	1
 License:	GPL
 Group:		Applications/File
 Source0:	http://www.boomerangsworld.de/worker/downloads/%{name}-%{version}.tar.bz2
-# Source0-md5:	cc34a21b0445eb42fe6fb7df3e78b59b
-Source1:	http://www.boomerangsworld.de/worker/downloads/%{name}-%{doc_version}_%{doc_release}-doc.tar.bz2
-# Source1-md5:	5b6c8b8d85dc06563ea856c22361dd57
+# Source0-md5:	f477d572b08d3539d2bea631269f23e9
+Source1:	http://www.boomerangsworld.de/worker/downloads/%{name}-%{doc_version}.%{doc_release}-doc.tar.bz2
+# Source1-md5:	b6df056c977eadb5fb4a9266dc287ab4
 Source2:	%{name}-48.png
 Source3:	%{name}-32.png
 Source4:	%{name}-16.png
