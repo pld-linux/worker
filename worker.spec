@@ -79,5 +79,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/worker/catalogs
 %{_datadir}/worker/config-*
 %{_mandir}/man1/worker.1*
-%{_mandir}/fr/man1/worker.1*
+%lang(fr) %{_mandir}/fr/man1/worker.1*
 %{_pixmapsdir}/*
