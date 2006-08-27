@@ -1,23 +1,29 @@
+#
+# Conditional build:
+%bcond_without 	avfs		# build without A Virtual Filesystem (avfs) support
+#
 %define		doc_version	2.10.0
-%define		doc_release	1
+%define		doc_release	2
 %define		doc_dir		%{name}-%{doc_version}.%{doc_release}-doc
 Summary:	A file manager for X in AMIGA style
 Summary(pl):	Zarz±dca plików dla X w amigowskim stylu
 Name:		worker
-Version:	2.10.0
+Version:	2.13.1
 Release:	1
 License:	GPL
 Group:		Applications/File
 Source0:	http://www.boomerangsworld.de/worker/downloads/%{name}-%{version}.tar.bz2
-# Source0-md5:	f477d572b08d3539d2bea631269f23e9
+# Source0-md5:	cfc315939dbc0dbe770be756cbd4cf01
 Source1:	http://www.boomerangsworld.de/worker/downloads/%{name}-%{doc_version}.%{doc_release}-doc.tar.bz2
-# Source1-md5:	b6df056c977eadb5fb4a9266dc287ab4
+# Source1-md5:	d7df227f6dd43a26651dc07590699148
 Source2:	%{name}-48.png
 Source3:	%{name}-32.png
 Source4:	%{name}-16.png
 Source5:	%{name}.desktop
+Patch0:		%{name}-Makefile.in.patch
 URL:		http://www.boomerangsworld.de/worker/
 BuildRequires:	XFree86-devel
+%{?with_avfs:BuildRequires:	avfs-static >= 0.9.5}
 BuildRequires:	bzip2-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	zlib-devel
@@ -34,14 +40,18 @@ or buttons with the builtin configuration program.
 Woker jest graficznym zarz±dc± plików dla X Window System. U¿ywa
 klasycznego widoku dwóch paneli z list± plików i katalogów. Wiele
 operacji potrafi wykonaæ samodzielnie, ale mo¿e te¿ wykorzystaæ
-zewnêtrzne programy do dzia³ania na zaznaczonych elementach. Nowe opcje
-mo¿na ³atwo dodawaæ przy u¿yciu wbudowanego programu konfiguracyjnego.
+zewnêtrzne programy do dzia³ania na zaznaczonych elementach. Nowe
+opcje mo¿na ³atwo dodawaæ przy u¿yciu wbudowanego programu
+konfiguracyjnego.
 
 %prep
 %setup -q -a 1
+%patch0 -p0
 
 %build
-%configure
+%configure \
+	%{!?with_avfs:--with-avfs=no}
+
 %{__make}
 
 %install
@@ -69,4 +79,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/worker/catalogs
 %{_datadir}/worker/config-*
 %{_mandir}/man1/worker.1*
+%{_mandir}/fr/man1/worker.1*
 %{_pixmapsdir}/*
