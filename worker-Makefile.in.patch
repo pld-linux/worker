@@ -1,0 +1,11 @@
+--- src/Makefile.in.oryg	2006-08-27 09:06:16.000000000 +0200
++++ src/Makefile.in	2006-08-27 09:07:10.000000000 +0200
+@@ -540,7 +540,7 @@
+ 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
+ worker$(EXEEXT): $(worker_OBJECTS) $(worker_DEPENDENCIES) 
+ 	@rm -f worker$(EXEEXT)
+-	$(CXXLINK) $(worker_LDFLAGS) $(worker_OBJECTS) $(worker_LDADD) $(LIBS)
++	$(CXXLINK) $(worker_LDFLAGS) $(worker_OBJECTS) $(worker_LDADD) $(LIBS) $(LDFLAGS)
+ 
+ mostlyclean-compile:
+ 	-rm -f *.$(OBJEXT) core *.core
