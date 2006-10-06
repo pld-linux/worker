@@ -8,19 +8,18 @@
 Summary:	A file manager for X in AMIGA style
 Summary(pl):	Zarz±dca plików dla X w amigowskim stylu
 Name:		worker
-Version:	2.13.1
+Version:	2.14.0
 Release:	1
 License:	GPL
 Group:		Applications/File
 Source0:	http://www.boomerangsworld.de/worker/downloads/%{name}-%{version}.tar.bz2
-# Source0-md5:	cfc315939dbc0dbe770be756cbd4cf01
+# Source0-md5:	b94a15ddc2b8699d315afa950535f22d
 Source1:	http://www.boomerangsworld.de/worker/downloads/%{name}-%{doc_version}.%{doc_release}-doc.tar.bz2
 # Source1-md5:	d7df227f6dd43a26651dc07590699148
 Source2:	%{name}-48.png
 Source3:	%{name}-32.png
 Source4:	%{name}-16.png
 Source5:	%{name}.desktop
-Patch0:		%{name}-Makefile.in.patch
 URL:		http://www.boomerangsworld.de/worker/
 BuildRequires:	XFree86-devel
 %{?with_avfs:BuildRequires:	avfs-static >= 0.9.5}
@@ -46,7 +45,6 @@ konfiguracyjnego.
 
 %prep
 %setup -q -a 1
-%patch0 -p0
 
 %build
 %configure \
@@ -80,4 +78,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/worker/config-*
 %{_mandir}/man1/worker.1*
 %lang(fr) %{_mandir}/fr/man1/worker.1*
+%lang(it) %{_mandir}/it/man1/worker.1*
 %{_pixmapsdir}/*
