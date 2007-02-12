@@ -6,7 +6,7 @@
 %define		doc_release	2
 %define		doc_dir		%{name}-%{doc_version}.%{doc_release}-doc
 Summary:	A file manager for X in AMIGA style
-Summary(pl.UTF-8):   Zarządca plików dla X w amigowskim stylu
+Summary(pl.UTF-8):	Zarządca plików dla X w amigowskim stylu
 Name:		worker
 Version:	2.14.1
 Release:	1
