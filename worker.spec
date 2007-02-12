@@ -6,7 +6,7 @@
 %define		doc_release	2
 %define		doc_dir		%{name}-%{doc_version}.%{doc_release}-doc
 Summary:	A file manager for X in AMIGA style
-Summary(pl):	Zarz±dca plików dla X w amigowskim stylu
+Summary(pl.UTF-8):   ZarzÄ…dca plikÃ³w dla X w amigowskim stylu
 Name:		worker
 Version:	2.14.1
 Release:	1
@@ -35,12 +35,12 @@ intern operations while any extern program can also be used for
 operate on the selected items. You can easily add actions to filetypes
 or buttons with the builtin configuration program.
 
-%description -l pl
-Woker jest graficznym zarz±dc± plików dla X Window System. U¿ywa
-klasycznego widoku dwóch paneli z list± plików i katalogów. Wiele
-operacji potrafi wykonaæ samodzielnie, ale mo¿e te¿ wykorzystaæ
-zewnêtrzne programy do dzia³ania na zaznaczonych elementach. Nowe
-opcje mo¿na ³atwo dodawaæ przy u¿yciu wbudowanego programu
+%description -l pl.UTF-8
+Woker jest graficznym zarzÄ…dcÄ… plikÃ³w dla X Window System. UÅ¼ywa
+klasycznego widoku dwÃ³ch paneli z listÄ… plikÃ³w i katalogÃ³w. Wiele
+operacji potrafi wykonaÄ‡ samodzielnie, ale moÅ¼e teÅ¼ wykorzystaÄ‡
+zewnÄ™trzne programy do dziaÅ‚ania na zaznaczonych elementach. Nowe
+opcje moÅ¼na Å‚atwo dodawaÄ‡ przy uÅ¼yciu wbudowanego programu
 konfiguracyjnego.
 
 %prep
