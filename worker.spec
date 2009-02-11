@@ -8,12 +8,12 @@
 Summary:	A file manager for X in AMIGA style
 Summary(pl.UTF-8):	Zarządca plików dla X w amigowskim stylu
 Name:		worker
-Version:	2.14.1
+Version:	2.17.1
 Release:	1
 License:	GPL
 Group:		Applications/File
 Source0:	http://www.boomerangsworld.de/worker/downloads/%{name}-%{version}.tar.bz2
-# Source0-md5:	1e3931a4f7339860ecb0f3124e2e2627
+# Source0-md5:	bcde4611e2c566f6fa782fc905d72780
 Source1:	http://www.boomerangsworld.de/worker/downloads/%{name}-%{doc_version}.%{doc_release}-doc.tar.bz2
 # Source1-md5:	d7df227f6dd43a26651dc07590699148
 Source2:	%{name}-48.png
@@ -21,7 +21,7 @@ Source3:	%{name}-32.png
 Source4:	%{name}-16.png
 Source5:	%{name}.desktop
 URL:		http://www.boomerangsworld.de/worker/
-BuildRequires:	XFree86-devel
+BuildRequires:	xorg-xserver-server-devel
 %{?with_avfs:BuildRequires:	avfs-static >= 0.9.5}
 BuildRequires:	bzip2-devel
 BuildRequires:	libstdc++-devel
