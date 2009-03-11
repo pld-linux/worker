@@ -1,3 +1,4 @@
+# TODO: change avfs-static to avfs-devel
 #
 # Conditional build:
 %bcond_without 	avfs		# build without A Virtual Filesystem (avfs) support
@@ -10,7 +11,7 @@ Summary(pl.UTF-8):	Zarządca plików dla X w amigowskim stylu
 Name:		worker
 Version:	2.17.1
 Release:	1
-License:	GPL
+License:	GPL v2+
 Group:		Applications/File
 Source0:	http://www.boomerangsworld.de/worker/downloads/%{name}-%{version}.tar.bz2
 # Source0-md5:	bcde4611e2c566f6fa782fc905d72780
@@ -21,10 +22,10 @@ Source3:	%{name}-32.png
 Source4:	%{name}-16.png
 Source5:	%{name}.desktop
 URL:		http://www.boomerangsworld.de/worker/
-BuildRequires:	xorg-xserver-server-devel
 %{?with_avfs:BuildRequires:	avfs-static >= 0.9.5}
 BuildRequires:	bzip2-devel
 BuildRequires:	libstdc++-devel
+BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
