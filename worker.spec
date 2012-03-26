@@ -1,4 +1,3 @@
-# TODO: change avfs-static to avfs-devel
 #
 # Conditional build:
 %bcond_without 	avfs		# build without A Virtual Filesystem (avfs) support
@@ -9,12 +8,12 @@
 Summary:	A file manager for X in AMIGA style
 Summary(pl.UTF-8):	Zarządca plików dla X w amigowskim stylu
 Name:		worker
-Version:	2.17.1
+Version:	2.19.1
 Release:	1
 License:	GPL v2+
 Group:		Applications/File
 Source0:	http://www.boomerangsworld.de/worker/downloads/%{name}-%{version}.tar.bz2
-# Source0-md5:	bcde4611e2c566f6fa782fc905d72780
+# Source0-md5:	48c5cb85ca6ff1744e690634459130d2
 Source1:	http://www.boomerangsworld.de/worker/downloads/%{name}-%{doc_version}.%{doc_release}-doc.tar.bz2
 # Source1-md5:	d7df227f6dd43a26651dc07590699148
 Source2:	%{name}-48.png
@@ -22,11 +21,13 @@ Source3:	%{name}-32.png
 Source4:	%{name}-16.png
 Source5:	%{name}.desktop
 URL:		http://www.boomerangsworld.de/worker/
-%{?with_avfs:BuildRequires:	avfs-static >= 0.9.5}
+%{?with_avfs:BuildRequires:	avfs-devel >= 0.9.5}
 BuildRequires:	bzip2-devel
+BuildRequires:	libmagic-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	zlib-devel
+Requires:	dbus-glib
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
